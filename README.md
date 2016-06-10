@@ -96,7 +96,7 @@ class UniqueCodeTest extends Controller
 
     $code = UniqueCode::OTP(3,'abc45');
     
-    echo $code;                           //This will outputs a4c or 5b2 or ac4 etc
+    echo $code; //This will outputs a4c or 5b2 or ac4 etc
   }
 
 }
