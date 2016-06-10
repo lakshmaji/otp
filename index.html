@@ -1,0 +1,169 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Otp by lakshmajim</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-dark.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/lakshmajim/otp">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/lakshmajim/otp/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/lakshmajim/otp/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>Otp</h1>
+          <p>This package is used to generate one-time password [ a random  string or number]</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/lakshmajim">lakshmajim</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h1>
+<a id="laravel---uniquecode" class="anchor" href="#laravel---uniquecode" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Laravel - UniqueCode</h1>
+
+<p><a href="http://lakshmajim.github.io/otp/">Wiki on web</a></p>
+
+<h2>
+<a id="what-it-is" class="anchor" href="#what-it-is" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>WHAT IT IS?</h2>
+
+<ul>
+<li>This package is used to generate one-time password [ a random  string or number]</li>
+</ul>
+
+<hr>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>INSTALLATION</h2>
+
+<ul>
+<li>Download package form  <a href="https://github.com/lakshmajim/otp">https://github.com/lakshmajim/otp</a> . </li>
+<li>OR YOU CAN RUN FOLLOWING COMMAND FROM TERMINAL</li>
+<li>With composer you can run this line <strong>composer require lakshmajim/uniquecode</strong>
+</li>
+</ul>
+
+<p>Run this command from the Terminal:</p>
+
+<div class="highlight highlight-source-shell"><pre>    composer require lakshmajim/uniquecode
+    composer update</pre></div>
+
+<hr>
+
+<h2>
+<a id="laravel-integration" class="anchor" href="#laravel-integration" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>LARAVEL INTEGRATION</h2>
+
+<p>you need to add the service provider. Open <code>app/config/app.php</code>, and add a new item to the providers array.</p>
+
+<div class="highlight highlight-text-html-php"><pre><span class="pl-s1">  <span class="pl-c1">Lakshmajim\UniqueCode\</span><span class="pl-c1">UniqueCodeServiceProvider</span><span class="pl-k">::</span><span class="pl-c1">class</span>,</span></pre></div>
+
+<p>Then, add a Facade for more convenient usage. In <code>app/config/app.php</code> add the following line to the <code>aliases</code> array:</p>
+
+<div class="highlight highlight-text-html-php"><pre><span class="pl-s1"> <span class="pl-s"><span class="pl-pds">'</span>UniqueCode<span class="pl-pds">'</span></span><span class="pl-k">=&gt;</span> <span class="pl-c1">Lakshmajim\UniqueCode\Facade\</span><span class="pl-c1">UniqueCode</span><span class="pl-k">::</span><span class="pl-c1">class</span>,</span></pre></div>
+
+<p>Again do composer update</p>
+
+<hr>
+
+<h2>
+<a id="method-available-parameters-and-responses" class="anchor" href="#method-available-parameters-and-responses" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>METHOD, AVAILABLE PARAMETERS AND RESPONSES</h2>
+
+<h5>
+<a id="method" class="anchor" href="#method" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Method</h5>
+
+<div class="highlight highlight-text-html-php"><pre><span class="pl-s1">OTP(<span class="pl-k">integer</span>, <span class="pl-k">string</span>) </span></pre></div>
+
+<div class="highlight highlight-text-html-php"><pre><span class="pl-s1"><span class="pl-k">use</span> <span class="pl-c1">UniqueCode</span>;</span>
+<span class="pl-s1"></span>
+<span class="pl-s1"><span class="pl-c1">UniqueCode</span><span class="pl-k">::</span>OTP(<span class="pl-c1">otp_length</span>, <span class="pl-c1">otp_charcaters_domain</span>) </span></pre></div>
+
+<h5>
+<a id="the-message_array-parameters" class="anchor" href="#the-message_array-parameters" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>The message_array parameters</h5>
+
+<table>
+<thead>
+<tr>
+<th align="left">PARAMETER</th>
+<th align="left">DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">otp_length</td>
+<td align="left">This defines the <strong>length of the random string</strong> generated as out put</td>
+</tr>
+<tr>
+<td align="left">otp_charcaters_domain</td>
+<td align="left">This defines the range of charcters taken to generate random string i.e, otp or verification code</td>
+</tr>
+</tbody>
+</table>
+
+<h2>
+<a id="generating-otp-or-verification-code" class="anchor" href="#generating-otp-or-verification-code" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Generating OTP or verification code</h2>
+
+<div class="highlight highlight-text-html-php"><pre><span class="pl-s1"></span>
+<span class="pl-s1"><span class="pl-k">&lt;</span>?<span class="pl-c1">php</span></span>
+<span class="pl-s1"></span>
+<span class="pl-s1"><span class="pl-k">namespace</span> <span class="pl-en">App\Http\Controllers</span>;</span>
+<span class="pl-s1"></span>
+<span class="pl-s1"><span class="pl-k">use</span> <span class="pl-c1">Illuminate\Http\Request</span>;</span>
+<span class="pl-s1"><span class="pl-k">use</span> <span class="pl-c1">App\Http\Requests</span>;</span>
+<span class="pl-s1"><span class="pl-k">use</span> <span class="pl-c1">App\Http\Controllers\Controller</span>;</span>
+<span class="pl-s1"><span class="pl-k">use</span> <span class="pl-c1">UniqueCode</span>; </span>
+<span class="pl-s1"></span>
+<span class="pl-s1"></span>
+<span class="pl-s1"><span class="pl-c">/**</span></span>
+<span class="pl-s1"><span class="pl-c"> * UniqueCode - Package usage Example</span></span>
+<span class="pl-s1"><span class="pl-c"> *</span></span>
+<span class="pl-s1"><span class="pl-c"> * <span class="pl-k">@access</span>  <span class="pl-k">public</span></span></span>
+<span class="pl-s1"><span class="pl-c"> * <span class="pl-k">@since</span>   1.2.0</span></span>
+<span class="pl-s1"><span class="pl-c"> * <span class="pl-k">@author</span>  lakshmaji &lt;lakshmajee88@gmail.com&gt;</span></span>
+<span class="pl-s1"><span class="pl-c"> */</span></span>
+<span class="pl-s1"><span class="pl-k">class</span> <span class="pl-en">UniqueCodeTest</span> <span class="pl-k">extends</span> <span class="pl-e">Controller</span></span>
+<span class="pl-s1">{</span>
+<span class="pl-s1">  <span class="pl-k">public</span> <span class="pl-k">function</span> <span class="pl-en">testGetOtp</span>()</span>
+<span class="pl-s1">  {</span>
+<span class="pl-s1"></span>
+<span class="pl-s1">    <span class="pl-smi">$code</span> <span class="pl-k">=</span> <span class="pl-c1">UniqueCode</span><span class="pl-k">::</span>OTP(<span class="pl-c1">3</span>,<span class="pl-s"><span class="pl-pds">'</span>abc45<span class="pl-pds">'</span></span>);</span>
+<span class="pl-s1"></span>
+<span class="pl-s1">    <span class="pl-c1">echo</span> <span class="pl-smi">$code</span>;                           <span class="pl-c">//This will outputs a4c or 5b2 or ac4 etc</span></span>
+<span class="pl-s1">  }</span>
+<span class="pl-s1"></span>
+<span class="pl-s1">}</span>
+<span class="pl-s1"><span class="pl-c">// end of class UniqueCodeTest</span></span>
+<span class="pl-s1"><span class="pl-c">// end of file UniqueCodeTest.php</span></span>
+<span class="pl-s1"></span></pre></div>
+
+<h2>
+<a id="licence" class="anchor" href="#licence" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Licence</h2>
+
+<p><a href="https://opensource.org/licenses/MIT"><em>MIT License (MIT)</em></a></p>
+
+<p>@ MUTYALA ANANTHA LAKSHMAJI</p>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
