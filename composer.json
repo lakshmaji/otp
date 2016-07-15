@@ -2,7 +2,7 @@
     "name": "lakshmajim/uniquecode",
     "description": "OTP generating package",
     "keywords": [
-        "OTP"
+        "OTP", "Laravel"
     ],
     "license": "MIT",
     "authors": [
