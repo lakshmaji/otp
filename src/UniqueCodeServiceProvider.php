@@ -1,7 +1,7 @@
 <?php 
 
 // Define namespace
-namespace Lakshmajim\UniqueCode;
+namespace Lakshmaji\UniqueCode;
 
 // Inlcude namespace
 use Illuminate\Support\ServiceProvider;

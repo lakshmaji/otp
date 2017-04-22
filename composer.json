@@ -1,5 +1,5 @@
 {
-    "name": "lakshmajim/uniquecode",
+    "name": "lakshmaji/uniquecode",
     "description": "OTP generating package",
     "keywords": [
         "OTP", "Laravel"
@@ -7,7 +7,7 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "lakshmajim",
+            "name": "lakshmaji",
             "email": ""
         }
     ],
@@ -16,7 +16,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Lakshmajim\\UniqueCode\\": "src/"
+            "Lakshmaji\\UniqueCode\\": "src/"
         }
     },
     "minimum-stability": "dev"

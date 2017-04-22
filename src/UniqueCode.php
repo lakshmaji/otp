@@ -1,7 +1,7 @@
 <?php 
 
 // Define namespace
-namespace Lakshmajim\UniqueCode;
+namespace Lakshmaji\UniqueCode;
 
 // Inlcude required namespace
 use Illuminate\Http\Request;

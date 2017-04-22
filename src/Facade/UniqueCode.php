@@ -1,7 +1,7 @@
 <?php 
 
 // Define namespace
-namespace Lakshmajim\UniqueCode\Facade;
+namespace Lakshmaji\UniqueCode\Facade;
  
 // Include namespace
 use Illuminate\Support\Facades\Facade;

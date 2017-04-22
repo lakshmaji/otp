@@ -1,6 +1,6 @@
 
 # Laravel - UniqueCode
-[Wiki on web](http://lakshmajim.github.io/otp/)
+[Wiki on web](http://lakshmaji.github.io/otp/)
 
 
 
@@ -17,14 +17,14 @@
 ##INSTALLATION
 
 
- - Download package form  https://github.com/lakshmajim/otp . 
+ - Download package form  https://github.com/lakshmaji/otp . 
  - OR YOU CAN RUN FOLLOWING COMMAND FROM TERMINAL
- - With composer you can run this line **composer require lakshmajim/uniquecode**
+ - With composer you can run this line **composer require lakshmaji/uniquecode**
 
 Run this command from the Terminal:
 
 ```bash
-    composer require lakshmajim/uniquecode
+    composer require lakshmaji/uniquecode
     composer update
 ```
 
@@ -34,11 +34,11 @@ Run this command from the Terminal:
 
 you need to add the service provider. Open `app/config/app.php`, and add a new item to the providers array.
 ```php
-  Lakshmajim\UniqueCode\UniqueCodeServiceProvider::class,
+  Lakshmaji\UniqueCode\UniqueCodeServiceProvider::class,
 ```
 Then, add a Facade for more convenient usage. In `app/config/app.php` add the following line to the `aliases` array:
 ```php
- 'UniqueCode'=> Lakshmajim\UniqueCode\Facade\UniqueCode::class,
+ 'UniqueCode'=> Lakshmaji\UniqueCode\Facade\UniqueCode::class,
 ```
 Again do composer update
 
