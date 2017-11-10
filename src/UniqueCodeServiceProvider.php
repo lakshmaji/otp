@@ -17,6 +17,8 @@ use Illuminate\Support\ServiceProvider;
  */ 
 class UniqueCodeServiceProvider extends ServiceProvider
 {
+    
+    protected $defer = TRUE;
 
     /**
      * Bootstrap the application services.
